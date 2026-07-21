@@ -1,0 +1,10 @@
+pytest
+selenium
+webdriver-manager
+pytest-html
+pytest-xdist
+pytest-order
+Faker
+python-dotenv
+openpyxl
+requests
