@@ -1,13 +1,24 @@
 from pages.login_file import LoginPage
-# from utils.screenshot import capturescreenshot
+from test_data.login_data import url
 
-def test_login(driver):
-    LoginPage.login(driver)
+from utils.data_reader import get_login_data
+import pytest
 
-  #  capturescreenshot(driver,"test_login")
+@pytest.mark.parametrize("username,password",get_login_data())
+def test_login(driver,username,password):
 
-  #pytest_runtest_makereport
- #my test case failed -> yes capture the screenshot 
+  
+      LoginPage.login(driver, username, password) 
+
+ 
+
+
+     
+      
+
+
+
+
 
 
 

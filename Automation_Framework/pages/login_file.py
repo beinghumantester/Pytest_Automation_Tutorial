@@ -1,16 +1,22 @@
 from selenium.webdriver.common.by import By
 import time
 from utils.logger import get_logger
-from test_data.login_data import url, username,password
+from test_data.login_data import url
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
+
+
+
 logger=get_logger()
 class LoginPage:
 
-    def login(driver):
+    
+    @staticmethod
+
+    def login(driver,username,password):
 
         driver.get(url)
        # time.sleep(3) 

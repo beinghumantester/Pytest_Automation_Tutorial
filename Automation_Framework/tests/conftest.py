@@ -1,5 +1,5 @@
 import pytest
-
+import csv
 from selenium import webdriver
 
 @pytest.fixture(params=["chrome","edge"])
@@ -23,3 +23,14 @@ def pytest_runtest_makereport(item,call):
         driver = item.funcargs.get("driver")
         if driver:
              capturescreenshot(driver,item.name)
+
+#@pytest.fixture
+#def login_data():
+ #   data=[]
+  #  with open("test_data/login_data.csv") as file:
+   #     reader = csv.DictReader(file) 
+    #    for row in reader:
+     #       data.append(row)
+
+    #return data
+
