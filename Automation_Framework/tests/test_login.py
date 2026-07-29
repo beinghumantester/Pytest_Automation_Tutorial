@@ -1,4 +1,6 @@
-from pages.login_file import LoginPage
+#from Automation_Framework.pages.login_page import LoginPage
+
+from pages.login_page import LoginPage
 from test_data.login_data import url
 
 from utils.data_reader import get_login_data
@@ -8,7 +10,8 @@ import pytest
 def test_login(driver,username,password):
 
   
-      LoginPage.login(driver, username, password) 
+      dashboard = LoginPage.login(driver, username, password) 
+      dashboard.admin_cta_click()
 
  
 

@@ -2,13 +2,9 @@ from selenium.webdriver.common.by import By
 import time
 from utils.logger import get_logger
 from test_data.login_data import url
-
+from pages.dashboard_page import DashboardPage
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-
-
-
 
 logger=get_logger()
 class LoginPage:
@@ -35,6 +31,8 @@ class LoginPage:
         WebDriverWait(driver,15).until(EC.url_contains("dashboard"))
 
         assert  driver.current_url =="https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
+
+        return DashboardPage(driver) 
 
        
 
